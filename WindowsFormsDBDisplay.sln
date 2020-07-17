@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsDBDisplay", "WindowsFormsDBDisplay.csproj", "{9CCA5BA4-9115-4123-9663-D66CD19E9D9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CCA5BA4-9115-4123-9663-D66CD19E9D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCA5BA4-9115-4123-9663-D66CD19E9D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCA5BA4-9115-4123-9663-D66CD19E9D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCA5BA4-9115-4123-9663-D66CD19E9D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61ECDB54-D2E3-4147-AE92-2A054067BDCD}
+	EndGlobalSection
+EndGlobal
