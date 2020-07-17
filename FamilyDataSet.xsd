@@ -42,7 +42,7 @@
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT familyMemberNo, firstName, lastName, hometown, relationship, age FROM FamilyTable</CommandText>
+                    <CommandText>SELECT firstName, lastName FROM FamilyTable</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -72,12 +72,8 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="familyMemberNo" DataSetColumn="familyMemberNo" />
               <Mapping SourceColumn="firstName" DataSetColumn="firstName" />
               <Mapping SourceColumn="lastName" DataSetColumn="lastName" />
-              <Mapping SourceColumn="hometown" DataSetColumn="hometown" />
-              <Mapping SourceColumn="relationship" DataSetColumn="relationship" />
-              <Mapping SourceColumn="age" DataSetColumn="age" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -89,10 +85,9 @@
   <xs:element name="FamilyDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FamilyDataSet" msprop:Generator_UserDSName="FamilyDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FamilyTable" msprop:Generator_TableClassName="FamilyTableDataTable" msprop:Generator_TableVarName="tableFamilyTable" msprop:Generator_TablePropName="FamilyTable" msprop:Generator_RowDeletingName="FamilyTableRowDeleting" msprop:Generator_RowChangingName="FamilyTableRowChanging" msprop:Generator_RowEvHandlerName="FamilyTableRowChangeEventHandler" msprop:Generator_RowDeletedName="FamilyTableRowDeleted" msprop:Generator_UserTableName="FamilyTable" msprop:Generator_RowChangedName="FamilyTableRowChanged" msprop:Generator_RowEvArgName="FamilyTableRowChangeEvent" msprop:Generator_RowClassName="FamilyTableRow">
+        <xs:element name="FamilyTable" msprop:Generator_TableClassName="FamilyTableDataTable" msprop:Generator_TableVarName="tableFamilyTable" msprop:Generator_RowChangedName="FamilyTableRowChanged" msprop:Generator_TablePropName="FamilyTable" msprop:Generator_RowDeletingName="FamilyTableRowDeleting" msprop:Generator_RowChangingName="FamilyTableRowChanging" msprop:Generator_RowEvHandlerName="FamilyTableRowChangeEventHandler" msprop:Generator_RowDeletedName="FamilyTableRowDeleted" msprop:Generator_RowClassName="FamilyTableRow" msprop:Generator_UserTableName="FamilyTable" msprop:Generator_RowEvArgName="FamilyTableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="familyMemberNo" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnfamilyMemberNo" msprop:Generator_ColumnPropNameInRow="familyMemberNo" msprop:Generator_ColumnPropNameInTable="familyMemberNoColumn" msprop:Generator_UserColumnName="familyMemberNo" type="xs:int" />
               <xs:element name="firstName" msprop:Generator_ColumnVarNameInTable="columnfirstName" msprop:Generator_ColumnPropNameInRow="firstName" msprop:Generator_ColumnPropNameInTable="firstNameColumn" msprop:Generator_UserColumnName="firstName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -107,29 +102,10 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="hometown" msprop:Generator_ColumnVarNameInTable="columnhometown" msprop:Generator_ColumnPropNameInRow="hometown" msprop:Generator_ColumnPropNameInTable="hometownColumn" msprop:Generator_UserColumnName="hometown" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="relationship" msprop:Generator_ColumnVarNameInTable="columnrelationship" msprop:Generator_ColumnPropNameInRow="relationship" msprop:Generator_ColumnPropNameInTable="relationshipColumn" msprop:Generator_UserColumnName="relationship" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="255" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="age" msprop:Generator_ColumnVarNameInTable="columnage" msprop:Generator_ColumnPropNameInRow="age" msprop:Generator_ColumnPropNameInTable="ageColumn" msprop:Generator_UserColumnName="age" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:FamilyTable" />
-      <xs:field xpath="mstns:familyMemberNo" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

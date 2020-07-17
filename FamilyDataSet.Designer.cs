@@ -279,17 +279,9 @@ namespace WindowsFormsDBDisplay {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class FamilyTableDataTable : global::System.Data.TypedTableBase<FamilyTableRow> {
             
-            private global::System.Data.DataColumn columnfamilyMemberNo;
-            
             private global::System.Data.DataColumn columnfirstName;
             
             private global::System.Data.DataColumn columnlastName;
-            
-            private global::System.Data.DataColumn columnhometown;
-            
-            private global::System.Data.DataColumn columnrelationship;
-            
-            private global::System.Data.DataColumn columnage;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -326,14 +318,6 @@ namespace WindowsFormsDBDisplay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn familyMemberNoColumn {
-                get {
-                    return this.columnfamilyMemberNo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn firstNameColumn {
                 get {
                     return this.columnfirstName;
@@ -345,30 +329,6 @@ namespace WindowsFormsDBDisplay {
             public global::System.Data.DataColumn lastNameColumn {
                 get {
                     return this.columnlastName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn hometownColumn {
-                get {
-                    return this.columnhometown;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn relationshipColumn {
-                get {
-                    return this.columnrelationship;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ageColumn {
-                get {
-                    return this.columnage;
                 }
             }
             
@@ -409,25 +369,14 @@ namespace WindowsFormsDBDisplay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FamilyTableRow AddFamilyTableRow(string firstName, string lastName, string hometown, string relationship, int age) {
+            public FamilyTableRow AddFamilyTableRow(string firstName, string lastName) {
                 FamilyTableRow rowFamilyTableRow = ((FamilyTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         firstName,
-                        lastName,
-                        hometown,
-                        relationship,
-                        age};
+                        lastName};
                 rowFamilyTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFamilyTableRow);
                 return rowFamilyTableRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FamilyTableRow FindByfamilyMemberNo(int familyMemberNo) {
-                return ((FamilyTableRow)(this.Rows.Find(new object[] {
-                            familyMemberNo})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -447,40 +396,19 @@ namespace WindowsFormsDBDisplay {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnfamilyMemberNo = base.Columns["familyMemberNo"];
                 this.columnfirstName = base.Columns["firstName"];
                 this.columnlastName = base.Columns["lastName"];
-                this.columnhometown = base.Columns["hometown"];
-                this.columnrelationship = base.Columns["relationship"];
-                this.columnage = base.Columns["age"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnfamilyMemberNo = new global::System.Data.DataColumn("familyMemberNo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfamilyMemberNo);
                 this.columnfirstName = new global::System.Data.DataColumn("firstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfirstName);
                 this.columnlastName = new global::System.Data.DataColumn("lastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlastName);
-                this.columnhometown = new global::System.Data.DataColumn("hometown", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhometown);
-                this.columnrelationship = new global::System.Data.DataColumn("relationship", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrelationship);
-                this.columnage = new global::System.Data.DataColumn("age", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnage);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnfamilyMemberNo}, true));
-                this.columnfamilyMemberNo.AutoIncrement = true;
-                this.columnfamilyMemberNo.AutoIncrementSeed = -1;
-                this.columnfamilyMemberNo.AutoIncrementStep = -1;
-                this.columnfamilyMemberNo.AllowDBNull = false;
-                this.columnfamilyMemberNo.Unique = true;
                 this.columnfirstName.MaxLength = 255;
                 this.columnlastName.MaxLength = 255;
-                this.columnhometown.MaxLength = 255;
-                this.columnrelationship.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -623,17 +551,6 @@ namespace WindowsFormsDBDisplay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int familyMemberNo {
-                get {
-                    return ((int)(this[this.tableFamilyTable.familyMemberNoColumn]));
-                }
-                set {
-                    this[this.tableFamilyTable.familyMemberNoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string firstName {
                 get {
                     try {
@@ -666,54 +583,6 @@ namespace WindowsFormsDBDisplay {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string hometown {
-                get {
-                    try {
-                        return ((string)(this[this.tableFamilyTable.hometownColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'hometown\' in table \'FamilyTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFamilyTable.hometownColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string relationship {
-                get {
-                    try {
-                        return ((string)(this[this.tableFamilyTable.relationshipColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'relationship\' in table \'FamilyTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFamilyTable.relationshipColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int age {
-                get {
-                    try {
-                        return ((int)(this[this.tableFamilyTable.ageColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'age\' in table \'FamilyTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFamilyTable.ageColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsfirstNameNull() {
                 return this.IsNull(this.tableFamilyTable.firstNameColumn);
             }
@@ -734,42 +603,6 @@ namespace WindowsFormsDBDisplay {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetlastNameNull() {
                 this[this.tableFamilyTable.lastNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IshometownNull() {
-                return this.IsNull(this.tableFamilyTable.hometownColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SethometownNull() {
-                this[this.tableFamilyTable.hometownColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsrelationshipNull() {
-                return this.IsNull(this.tableFamilyTable.relationshipColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetrelationshipNull() {
-                this[this.tableFamilyTable.relationshipColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsageNull() {
-                return this.IsNull(this.tableFamilyTable.ageColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetageNull() {
-                this[this.tableFamilyTable.ageColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -932,12 +765,8 @@ namespace WindowsFormsDBDisplay.FamilyDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "FamilyTable";
-            tableMapping.ColumnMappings.Add("familyMemberNo", "familyMemberNo");
             tableMapping.ColumnMappings.Add("firstName", "firstName");
             tableMapping.ColumnMappings.Add("lastName", "lastName");
-            tableMapping.ColumnMappings.Add("hometown", "hometown");
-            tableMapping.ColumnMappings.Add("relationship", "relationship");
-            tableMapping.ColumnMappings.Add("age", "age");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -999,8 +828,7 @@ namespace WindowsFormsDBDisplay.FamilyDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT familyMemberNo, firstName, lastName, hometown, relationship, age FROM Fami" +
-                "lyTable";
+            this._commandCollection[0].CommandText = "SELECT firstName, lastName FROM FamilyTable";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
